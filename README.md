@@ -4,7 +4,7 @@
 
 [![Paper](https://img.shields.io/badge/Paper-arXiv-red)](YOUR_ARXIV_LINK)
 [![Dataset](https://img.shields.io/badge/🤗-Dataset-yellow)](https://huggingface.co/datasets/crumeike/tornadonet-datasets)
-[![Models](https://img.shields.io/badge/🤗-Models-blue)](https://huggingface.co/crumeike/tornadonet-models)
+[![Models](https://img.shields.io/badge/🤗-Models-blue)](https://huggingface.co/crumeike/tornadonet-checkpoints)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
@@ -85,13 +85,13 @@ from huggingface_hub import hf_hub_download
 
 # Download best baseline
 model_path = hf_hub_download(
-    repo_id="crumeike/tornadonet-models",
+    repo_id="crumeike/tornadonet-checkpoints",
     filename="tornadonet-yolo11-x-baseline/weights/best.pt"
 )
 
 # Download best ordinal model
 ordinal_model = hf_hub_download(
-    repo_id="crumeike/tornadonet-models",
+    repo_id="crumeike/tornadonet-checkpoints",
     filename="tornadonet-rtdetr-l-ordinal-psi0.5-k1/weights/best.pt"
 )
 ```
@@ -180,9 +180,9 @@ data/
 - `tornadonet-rtdetr-l-ordinal-psi0.5-k1` (Main contribution)
 - `tornadonet-rtdetr-l-ordinal-lambda0.05` (Alternative approach)
 
-All models available at [🤗 HuggingFace](https://huggingface.co/crumeike/tornadonet-models)
-
----
+All model checkpoints and datasets are available at:
+- [🤗 tornadonet-checkpoints](https://huggingface.co/crumeike/tornadonet-checkpoints)
+- [🤗 tornadonet-datasets](https://huggingface.co/crumeike/tornadonet-datasets)
 
 ## Citation
 
