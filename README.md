@@ -27,32 +27,12 @@ TornadoNet is a comprehensive benchmark for automated street-level building dama
 
 ---
 
-## Results
-
-### Baseline Performance
-
-| Model | mAP@0.5 (%) | F1 Score (%) | Ordinal Top-1 (%) | MAOE | FPS | Params (M) |
-|-------|-------------|--------------|-------------------|------|-----|------------|
-| YOLO11x | **46.05** | **49.40** | 85.20 | 0.76 | 66 | 56.8 |
-| YOLOv8n | 40.98 | 45.11 | 84.01 | 0.78 | **276** | **3.0** |
-| RT-DETR-L | 39.87 | 44.77 | **88.13** | **0.65** | 78 | 32.0 |
-
-### Ordinal Supervision Impact
-
-| Model | Configuration | mAP@0.5 (%) | Δ vs Baseline | Ordinal Top-1 (%) | MAOE |
-|-------|---------------|-------------|---------------|-------------------|------|
-| RT-DETR-L | Baseline | 39.87 | — | 88.13 | 0.65 |
-| RT-DETR-L | ψ=0.5, K=1 | **44.70** | **+4.8** | **91.15** | **0.56** |
-| RT-DETR-L | λ=0.05 | 43.36 | +3.5 | 89.54 | 0.61 |
-
----
-
 ## Installation
 
 ```bash
 # Clone repository
 git clone https://github.com/crumeike/TornadoNet.git
-cd TornadoNet
+cd TornadoNet/main
 
 # Create environment
 conda create -n tornadonet python=3.10
@@ -169,6 +149,40 @@ data/
 
 ---
 
+## Results
+
+### Baseline Performance*
+
+| Model | Type | mAP@0.5 | F1 Score | Ordinal Top-1 | MAOE | FPS | Params | Download |
+|-------|------|---------|----------|---------------|------|-----|--------|----------|
+| YOLOv8-n | CNN | 40.98% | 45.11% | 84.01% | 0.78 | 276 | 3.0M | [📥](https://huggingface.co/crumeike/tornadonet-checkpoints/tree/main/tornadonet-yolov8-n-baseline) |
+| YOLOv8-l | CNN | 42.09% | 46.41% | 84.19% | 0.78 | 91 | 43.6M | [📥](https://huggingface.co/crumeike/tornadonet-checkpoints/tree/main/tornadonet-yolov8-l-baseline) |
+| YOLOv8-x | CNN | 41.84% | 46.24% | 83.04% | 0.81 | 68 | 68.1M | [📥](https://huggingface.co/crumeike/tornadonet-checkpoints/tree/main/tornadonet-yolov8-x-baseline) |
+| YOLO11-n | CNN | 41.14% | 45.73% | 84.79% | 0.77 | 239 | 2.6M | [📥](https://huggingface.co/crumeike/tornadonet-checkpoints/tree/main/tornadonet-yolo11-n-baseline) |
+| YOLO11-l | CNN | 40.44% | 44.41% | 83.75% | 0.79 | 96 | 25.3M | [📥](https://huggingface.co/crumeike/tornadonet-checkpoints/tree/main/tornadonet-yolo11-l-baseline) |
+| YOLO11-x | CNN | **46.05%** | **49.40%** | 85.20% | 0.76 | 66 | 56.8M | [📥](https://huggingface.co/crumeike/tornadonet-checkpoints/tree/main/tornadonet-yolo11-x-baseline) |
+| RT-DETR-L | Transformer | 39.87% | 44.77% | **88.13%** | **0.65** | 78 | 32.0M | [📥](https://huggingface.co/crumeike/tornadonet-checkpoints/tree/main/tornadonet-rtdetr-l-baseline) |
+| RT-DETR-X | Transformer | 35.75% | 41.54% | 87.74% | 0.67 | 79 | 65.5M | [📥](https://huggingface.co/crumeike/tornadonet-checkpoints/tree/main/tornadonet-rtdetr-x-baseline) |
+
+###  Ordinal Supervision Impact*
+
+| Model | Configuration | mAP@0.5 | Δ vs Baseline | Ordinal Top-1 | MAOE | Download |
+|-------|---------------|---------|---------------|---------------|------|----------|
+| RT-DETR-L | Baseline | 39.87% | — | 88.13% | 0.65 | [📥](https://huggingface.co/crumeike/tornadonet-checkpoints/tree/main/tornadonet-rtdetr-l-baseline) |
+| RT-DETR-L | ψ=0.5, K=1 | **44.70%** | **+4.8 pp** | **91.15%** | **0.56** | [📥](https://huggingface.co/crumeike/tornadonet-checkpoints/tree/main/tornadonet-rtdetr-l-ordinal-psi0.5-k1) |
+| RT-DETR-L | λ=0.05 | 43.36% | +3.5 pp | 89.54% | 0.61 | [📥](https://huggingface.co/crumeike/tornadonet-checkpoints/tree/main/tornadonet-rtdetr-l-ordinal-lambda0.05) |
+
+\* *Values represent mean ± std across 3 random seeds (paper). Downloaded checkpoints are from the best-performing seed.*
+
+**Legend:**
+- **mAP@0.5**: Mean Average Precision at IoU threshold 0.5
+- **Ordinal Top-1**: Percentage of predictions within ±1 damage class
+- **MAOE**: Mean Absolute Ordinal Error (lower is better)
+- **FPS**: Frames per second on NVIDIA A100 GPU
+- **Δ**: Change compared to baseline (pp = percentage points)
+
+---
+
 ## Available Models
 
 ### Baseline Models (8)
@@ -182,9 +196,8 @@ data/
 - `tornadonet-rtdetr-l-ordinal-psi0.5-k1` (Main contribution)
 - `tornadonet-rtdetr-l-ordinal-lambda0.05` (Alternative approach)
 
-All model checkpoints and datasets are available at:
-- [🤗 tornadonet-checkpoints](https://huggingface.co/crumeike/tornadonet-checkpoints/tree/main)
-- [🤗 tornadonet-datasets](https://huggingface.co/crumeike/tornadonet-datasets/tree/main)
+All pre-trained model checkpoints and datasets are available at: [🤗 crumeike/tornadonet-checkpoints](https://huggingface.co/crumeike/tornadonet-checkpoints/tree/main)
+
 
 ## Citation
 
