@@ -181,8 +181,6 @@ data/
 - **FPS**: Frames per second on NVIDIA A100 GPU
 - **Δ**: Change compared to baseline (pp = percentage points)
 
----
-
 ## Available Models
 
 ### Baseline Models (8)
@@ -198,6 +196,7 @@ data/
 
 All pre-trained model checkpoints and datasets are available at: [🤗 crumeike/tornadonet-checkpoints](https://huggingface.co/crumeike/tornadonet-checkpoints/tree/main)
 
+---
 
 ## Citation
 
