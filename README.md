@@ -86,13 +86,13 @@ from huggingface_hub import hf_hub_download
 # Download best baseline
 model_path = hf_hub_download(
     repo_id="crumeike/tornadonet-checkpoints",
-    filename="tornadonet-yolo11-x-baseline/weights/best.pt"
+    filename="tornadonet-yolo11-x-baseline/best.pt"
 )
 
 # Download best ordinal model
 ordinal_model = hf_hub_download(
     repo_id="crumeike/tornadonet-checkpoints",
-    filename="tornadonet-rtdetr-l-ordinal-psi0.5-k1/weights/best.pt"
+    filename="tornadonet-rtdetr-l-ordinal-psi0.5-k1/best.pt"
 )
 ```
 
