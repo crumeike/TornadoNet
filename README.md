@@ -201,13 +201,14 @@ If you use TornadoNet in your research, please cite:
 
 ## Acknowledgments
 
-This work was supported by the Center for Risk-Based Community Resilience Planning (NIST Cooperative Agreement 70NANB15H044) and SciServer (NSF Award ACI-1261715).
+The authors acknowledge the Center for Risk-Based Community Resilience Planning, a NIST-funded Center of Excellence (Cooperative Agreement 70NANB15H044), for providing the street-view imagery dataset, and SciServer (sciserver.org), developed at Johns Hopkins University and funded by NSF Award ACI-1261715, for computational resources. These resources were instrumental in the development and validation of the models presented in this work.
 
 ---
 
 ## License
 
-This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
+**Model and Code:** MIT License - see [LICENSE](LICENSE) file  
+**Dataset:** CC BY 4.0 - see [DATA_LICENSE](DATA_LICENSE) file
 
 ---
 
