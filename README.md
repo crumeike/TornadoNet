@@ -194,7 +194,10 @@ data/
 - `tornadonet-rtdetr-l-ordinal-psi0.5-k1` (Main contribution)
 - `tornadonet-rtdetr-l-ordinal-lambda0.05` (Alternative approach)
 
-All pre-trained model checkpoints and datasets are available at: [🤗 crumeike/tornadonet-checkpoints](https://huggingface.co/crumeike/tornadonet-checkpoints/tree/main)
+All pre-trained model checkpoints and datasets are available at 🤗HuggingFace: 
+- [Models](https://huggingface.co/crumeike/tornadonet-checkpoints/tree/main)
+- [Datasets](https://huggingface.co/crumeike/tornadonet-checkpoints/tree/main)
+
 
 ---
 
