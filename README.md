@@ -157,13 +157,15 @@ data/
 
 ### Damage Classification
 
-| Class | Label | Description | Count (Train/Val/Test) |
-|-------|-------|-------------|------------------------|
-| DS0 | Undamaged | No visible damage | 2,847 / 581 / 588 |
-| DS1 | Slight | Minor roof/window damage | 1,789 / 372 / 369 |
-| DS2 | Moderate | Significant roof damage | 951 / 219 / 212 |
-| DS3 | Extensive | Major structural damage | 464 / 126 / 137 |
-| DS4 | Complete | Total collapse | 133 / 44 / 58 |
+| Class | Label | Description |
+|-------|-------|-------------|
+| DS0 | Undamaged | No visible damage |
+| DS1 | Slight | Minor roof/window damage |
+| DS2 | Moderate | Significant roof damage |
+| DS3 | Extensive | Major structural damage |
+| DS4 | Complete | Total collapse |
+
+**Dataset splits:** 6,184 train / 1,342 val / 1,364 test (75% / 15% / 15%)
 
 ---
 
