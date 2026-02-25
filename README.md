@@ -3,8 +3,8 @@
 **Real-Time Building Damage Detection with Ordinal Supervision**
 
 [![Paper](https://img.shields.io/badge/Paper-arXiv-red)](YOUR_ARXIV_LINK)
-[![Dataset](https://img.shields.io/badge/🤗-Dataset-yellow)](https://huggingface.co/datasets/crumeike/tornadonet-datasets)
-[![Models](https://img.shields.io/badge/🤗-Models-blue)](https://huggingface.co/crumeike/tornadonet-checkpoints)
+[![Dataset](https://img.shields.io/badge/🤗-Dataset-yellow)](https://huggingface.co/datasets/crumeike/tornadonet-datasets/tree/main)
+[![Models](https://img.shields.io/badge/🤗-Models-blue)](https://huggingface.co/crumeike/tornadonet-checkpoints/tree/main)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
@@ -183,8 +183,8 @@ data/
 - `tornadonet-rtdetr-l-ordinal-lambda0.05` (Alternative approach)
 
 All model checkpoints and datasets are available at:
-- [🤗 tornadonet-checkpoints](https://huggingface.co/crumeike/tornadonet-checkpoints)
-- [🤗 tornadonet-datasets](https://huggingface.co/crumeike/tornadonet-datasets)
+- [🤗 tornadonet-checkpoints](https://huggingface.co/crumeike/tornadonet-checkpoints/tree/main)
+- [🤗 tornadonet-datasets](https://huggingface.co/crumeike/tornadonet-datasets/tree/main)
 
 ## Citation
 
