@@ -2,7 +2,7 @@
 
 **Real-Time Building Damage Detection with Ordinal Supervision**
 
-[![Paper](https://img.shields.io/badge/Paper-arXiv-red)](YOUR_ARXIV_LINK)
+[![Paper](https://img.shields.io/badge/Paper-arXiv-red)](https://arxiv.org/abs/2603.11557)
 [![Dataset](https://img.shields.io/badge/🤗-Dataset-yellow)](https://huggingface.co/datasets/crumeike/tornadonet-datasets/tree/main)
 [![Models](https://img.shields.io/badge/🤗-Models-blue)](https://huggingface.co/crumeike/tornadonet-checkpoints/tree/main)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -209,7 +209,7 @@ If you use TornadoNet in your research, please cite:
 @article{umeike2026tornadonet,
   title={TornadoNet: Real-Time Building Damage Detection with Ordinal Supervision},
   author={Umeike, Robinson and Pham, Cuong and Hausen, Ryan and Dao, Thang and Crawford, Shane and Brown-Giammanco, Tanya and Lemson, Gerard and van de Lindt, John and Johnston, Blythe and Mitschang, Arik and Do, Trung},
-  journal={arXiv preprint arXiv:XXXX.XXXXX} => (TBD),
+  journal={arXiv preprint arXiv:2603.11557},
   year={2026}
 }
 ```
